@@ -1,0 +1,304 @@
+<html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Crafty pottery</title>
+    <link rel="stylesheet" href="../static/assets/vendors/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="../static/assets/vendors/flag-icon-css/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="../static/assets/vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="../static/assets/vendors/select2/select2.min.css" />
+    <link rel="stylesheet" href="../static/assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/assets/css/style.css" />
+    <link rel="shortcut icon" href="../static/assets/images/favicon.png" />
+	 <script type="text/javascript"
+      src="http://maps.google.com/maps/api/js?sensor=false&key=AIzaSyAzfJHU7mKkVKW9nTVPymNY-0emhlP-0DQ&v=3.21.5a&libraries=drawing&signed_in=true&libraries=places,drawing"></script>
+	<style>
+	.custom-sidebar {
+    background-color: #FF9933;
+}
+	</style>
+  </head>
+  <body>
+    <div class="container-scroller">
+     <nav class="sidebar sidebar-offcanvas custom-sidebar" id="sidebar">
+    <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
+     
+    </div>
+    <ul class="nav">
+      
+       <li class="nav-item">
+        <a class="nav-link" href="/post">
+          <i class="mdi mdi-home menu-icon"></i>
+          <span class="menu-title">Dashboard</span>
+        </a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link" href="/post">
+          <i class="mdi mdi-contacts menu-icon"></i>
+          <span class="menu-title">Add product</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/my_post">
+          <i class="mdi mdi-contacts menu-icon"></i>
+          <span class="menu-title">My products</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/view_order">
+           <i class="mdi mdi-contacts menu-icon"></i>
+          <span class="menu-title">Orders</span>
+        </a>
+      </li>
+	   <li class="nav-item">
+        <a class="nav-link" href="/view_req">
+           <i class="mdi mdi-contacts menu-icon"></i>
+          <span class="menu-title">Requests</span>
+        </a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="/logout">
+           <i class="mdi mdi-contacts menu-icon"></i>
+          <span class="menu-title">Logout</span>
+        </a>
+      </li>
+     
+  </nav>
+      <div class="container-fluid page-body-wrapper">
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close mdi mdi-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-default-theme">
+            <div class="img-ss rounded-circle bg-light border mr-3"></div> Default
+          </div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme">
+            <div class="img-ss rounded-circle bg-dark border mr-3"></div> Dark
+          </div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles light"></div>
+            <div class="tiles dark"></div>
+          </div>
+        </div>
+        <nav class="navbar col-lg-12 col-12 p-lg-0 fixed-top d-flex flex-row">
+          <div class="navbar-menu-wrapper d-flex align-items-stretch justify-content-between">
+            <a class="navbar-brand brand-logo-mini align-self-center d-lg-none" href="../../index.html"><img src="../../assets/images/logo-mini.svg" alt="logo" /></a>
+            <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
+              <i class="mdi mdi-menu"></i>
+            </button>
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+               
+                <div class="dropdown-menu navbar-dropdown navbar-dropdown-large preview-list" aria-labelledby="notificationDropdown">
+                  <h6 class="p-3 mb-0">Notifications</h6>
+                  
+                  
+                  
+                 
+              </li>
+              <li class="nav-item dropdown d-none d-sm-flex">
+                
+                <div class="dropdown-menu navbar-dropdown navbar-dropdown-large preview-list" aria-labelledby="messageDropdown">
+                  <h6 class="p-3 mb-0">Messages</h6>
+                  
+                  
+                 
+                  <h6 class="p-3 mb-0">See all activity</h6>
+                </div>
+              </li>
+              <li class="nav-item nav-search border-0 ml-1 ml-md-3 ml-lg-5 d-none d-md-flex">
+                <form class="nav-link form-inline mt-2 mt-md-0">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" />
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <i class="mdi mdi-magnify"></i>
+                      </span>
+                    </div>
+                  </div>
+                </form>
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right ml-lg-auto">
+              
+              <li class="nav-item nav-profile dropdown border-0">
+                <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown">
+                  <img class="nav-profile-img mr-2" alt="" src="../static/assets/images/faces/face1.jpg" />
+                  <span class="profile-name">Welcome</span>
+                </a>
+                <div class="dropdown-menu navbar-dropdown w-100" aria-labelledby="profileDropdown">
+                  
+                  <a class="dropdown-item" href="#">
+                    <i class="mdi mdi-logout mr-2 text-primary"></i> Signout </a>
+                </div>
+              </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-menu"></span>
+            </button>
+          </div>
+        </nav>
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title">Potter</h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"> Potter </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="row">
+              <div class="col-md-6 grid-margin stretch-card mx-auto">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Add Your product for sale </h4>
+                  <p class="card-description">
+                    
+                  </p>
+                  <form class="forms-sample" name="form1" method="post" enctype="multipart/form-data">
+				  <div class="form-group">
+                      <label for="exampleInputUsername1">Upload Image</label>
+                      <input type="file" accept=".jpg, .png, .jpeg" class="form-control" name="image" id="exampleInputUsername1">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">Product category</label>
+                      <input type="text" class="form-control" name="product_type" id="exampleInputUsername1" placeholder="Enter category">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Product</label>
+                      <input type="text" name="product" class="form-control" id="exampleInputEmail1" placeholder="Product">
+                    </div>
+					 <div class="form-group">
+                      <label for="exampleInputEmail1">Quantity</label>
+                      <input type="number" name="quantity" class="form-control" id="exampleInputEmail1" placeholder="Product">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Price</label>
+                      <input type="text" name="price" class="form-control" placeholder="Price">
+                    </div>
+					<div class="form-group">
+                      <label for="exampleInputPassword1">Message</label>
+                      <textarea name="message" id="exampleInputPassword1" cols="30" rows="9" class="form-control" placeholder="Enter message"></textarea>
+                    </div>
+                    
+                    
+                    <button type="submit" class="btn btn-primary me-2">Post</button>
+                   
+                  </form>
+                </div>
+              </div>
+            </div>
+           <div class="col-md-6 grid-margin stretch-card mx-auto">
+    <div class="card">
+        <div class="card-body" style="max-height: 600px; overflow-y: auto;">
+            <h4 class="card-title">Nearby Customers</h4>
+            <p class="card-description"></p>
+            {% for user in nearby_users %}
+                    <li>
+                        <strong>{{ user['user_details']['name'] }}</strong><br>
+                        {% if user['user_details'] %}
+                            <strong>Mobile:</strong> {{ user['user_details']['mobile'] }}<br>
+                            <strong>Address:</strong> {{ user['user_details']['address'] }}<br>
+                        {% else %}
+                            <em>No additional details available</em><br>
+                        {% endif %}
+                        <hr>
+                    </li>
+                    {% endfor %}
+        </div>
+    </div>
+</div>
+              
+              
+              
+              <div id="map" style="height: 800px; width: 800px;">
+              
+              
+              
+              
+              
+              
+            </div>
+          </div>
+         
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+	
+	
+	 <script type="text/javascript">
+    var locations = [
+        {% for user in nearby_users %}
+            [{{ user.latitude }}, {{ user.longitude }}, 4],
+        {% endfor %}
+    ];
+
+    var providerLocation = [
+        [{{ provider_coords[0] }}, {{ provider_coords[1] }}, 4]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: new google.maps.LatLng(10.790483, 78.704673),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+	
+	 console.log('User Locations:', locations);
+
+    // Print provider location to console
+    console.log('Provider Location:', providerLocation);
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][0], locations[i][1]),
+            map: map
+        });
+
+        google.maps.event.addListener(marker, 'click', (function (marker, i) {
+            return function () {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+    }
+
+    // Add marker for the logged-in provider
+    for (i = 0; i < providerLocation.length; i++) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(providerLocation[i][0], providerLocation[i][1]),
+            map: map
+        });
+
+        marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
+
+        google.maps.event.addListener(marker, 'click', (function (marker, i) {
+            return function () {
+                infowindow.setContent(providerLocation[i][0]);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+    }
+</script>
+    <!-- container-scroller -->
+    <script src="../static/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../static/assets/vendors/select2/select2.min.js"></script>
+    <script src="../static/assets/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <script src="../static/assets/js/off-canvas.js"></script>
+    <script src="../static/assets/js/hoverable-collapse.js"></script>
+    <script src="../static/assets/js/misc.js"></script>
+    <script src="../static/assets/js/file-upload.js"></script>
+    <script src="../static/assets/js/typeahead.js"></script>
+    <script src="../static/assets/js/select2.js"></script>
+  </body>
+</html>

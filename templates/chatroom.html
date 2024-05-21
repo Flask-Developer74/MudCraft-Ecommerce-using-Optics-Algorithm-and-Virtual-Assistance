@@ -1,0 +1,102 @@
+<html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Crafty pottery</title>
+    <link rel="stylesheet" href="../static/assets/vendors/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="../static/assets/vendors/flag-icon-css/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="../static/assets/vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="../static/assets/vendors/select2/select2.min.css" />
+    <link rel="stylesheet" href="../static/assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/assets/css/style.css" />
+    <link rel="shortcut icon" href="../static/assets/images/favicon.png" />
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='chatroom.css')}}">
+	<style>
+	.custom-sidebar {
+    background-color: #FF9933;
+}
+	</style>
+  </head>
+  <body>
+    <div class="container-scroller">
+      <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title">Potter</h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/view_req">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"> <a href="/logout">Logout</a> </li>
+                </ol>
+              </nav>
+            </div>
+
+   <div class="row mt-4" style="background-color: #f0f0f0; padding: 20px; border-radius: 10px;">
+    <div class="col-md-6">
+        <div class="heading mb-4">
+            <div class="room-info">
+                <h3>ID: <span class="heading-mark">{{room_id}}</span></h3>
+                <h5>You have joined as <span class="heading-mark">{{display_name}}</span></h5>
+                <div><div id="room_link"></div><br><span><a href="">Click to Share link</a></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="row">
+    <div id="video_grid" class="col-md-6"></div>
+
+    <div class="col-md-6 mx-auto">
+            <div id="permission_alert" class="alert alert-danger" role="alert" style="display: none;">
+                <strong>Please allow camera and mic permissions!</strong>
+            </div>
+            <div class="shadow p-0">
+                <div class="vid-wrapper bg-dark">
+                    <video id="local_vid" autoplay muted style="max-height: 400px; max-width: 100%;"></video>
+                </div>
+                <div class="p-3 w-100 bg-light text-center">
+                    <button id="bttn_mute" class="btn btn-lg btn-outline-secondary rounded-circle mx-3">
+                        <span class="material-icons pt-2">mic</span>
+                    </button>
+                    <button id="bttn_vid_mute" class="btn btn-lg btn-outline-secondary rounded-circle mx-3">
+                        <span class="material-icons pt-2">videocam</span>
+                    </button>
+                <button id="call_end" class="btn btn-lg btn-danger rounded-circle">
+                    <span class="material-icons pt-2">call_end</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <script src="../static/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../static/assets/vendors/select2/select2.min.js"></script>
+    <script src="../static/assets/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <script src="../static/assets/js/off-canvas.js"></script>
+    <script src="../static/assets/js/hoverable-collapse.js"></script>
+    <script src="../static/assets/js/misc.js"></script>
+    <script src="../static/assets/js/file-upload.js"></script>
+    <script src="../static/assets/js/typeahead.js"></script>
+    <script src="../static/assets/js/select2.js"></script>
+	<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Your custom scripts -->
+<script src="{{url_for('static', filename='chatroom_checkpoint.js')}}"></script>
+  </body>
+</html>
